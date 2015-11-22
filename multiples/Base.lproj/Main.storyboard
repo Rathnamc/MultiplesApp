@@ -29,7 +29,7 @@
                                     <constraint firstAttribute="height" constant="79" id="i3v-Fe-dV1"/>
                                 </constraints>
                             </imageView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Wa-Gc-Gav" userLabel="PlayBtn">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Wa-Gc-Gav" userLabel="PlayBtn">
                                 <rect key="frame" x="200" y="365" width="172" height="177"/>
                                 <animations/>
                                 <constraints>
@@ -37,8 +37,11 @@
                                     <constraint firstAttribute="height" constant="194" id="fjG-zT-C3q"/>
                                 </constraints>
                                 <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="onPlayBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eM7-D4-RGR"/>
+                                </connections>
                             </button>
-                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What multiple to add by?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jta-gS-ZES" userLabel="multipleTxt">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What multiple to add by?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jta-gS-ZES" userLabel="multipleTxt">
                                 <rect key="frame" x="192" y="311" width="217" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -48,7 +51,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Press Add to add!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oey-bs-tfh" userLabel="addLbl">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Press Add to add!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oey-bs-tfh" userLabel="addLbl">
                                 <rect key="frame" x="122" y="122" width="344" height="58"/>
                                 <animations/>
                                 <constraints>
@@ -59,14 +62,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text=" # + # = ###" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJQ-ez-g6c" userLabel="equationLbl">
-                                <rect key="frame" x="122" y="223" width="344" height="26"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="44"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jul-vw-sfj" userLabel="addBtn">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jul-vw-sfj" userLabel="addBtn">
                                 <rect key="frame" x="195" y="421" width="211" height="101"/>
                                 <animations/>
                                 <constraints>
@@ -74,18 +70,31 @@
                                     <constraint firstAttribute="height" constant="101" id="Szh-r8-iJI"/>
                                 </constraints>
                                 <state key="normal" image="add"/>
+                                <connections>
+                                    <action selector="onAddBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YNh-y9-99V"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLJ-uq-giQ" userLabel="equationLbl">
+                                <rect key="frame" x="153" y="228" width="280" height="42"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="20b-Za-6A4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="iLJ-uq-giQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="43r-wR-c5h"/>
+                            <constraint firstItem="iLJ-uq-giQ" firstAttribute="top" secondItem="Oey-bs-tfh" secondAttribute="bottom" constant="48" id="4J6-5b-s3b"/>
                             <constraint firstItem="2eR-u6-Abb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4fY-O0-ky1"/>
                             <constraint firstItem="Oey-bs-tfh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="102" id="8Od-nt-iRE"/>
-                            <constraint firstItem="Jta-gS-ZES" firstAttribute="top" secondItem="VJQ-ez-g6c" secondAttribute="bottom" constant="62" id="EfQ-dJ-dnC"/>
                             <constraint firstItem="2eR-u6-Abb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="24" id="FA5-hg-yVd"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1Wa-Gc-Gav" secondAttribute="bottom" constant="41" id="IGR-5O-1ng"/>
                             <constraint firstAttribute="trailing" secondItem="5QF-9m-Wm0" secondAttribute="trailing" id="Ib2-jB-C7b"/>
-                            <constraint firstItem="VJQ-ez-g6c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IlK-EO-x6V"/>
                             <constraint firstItem="1Wa-Gc-Gav" firstAttribute="centerX" secondItem="Jta-gS-ZES" secondAttribute="centerX" id="J7m-kX-aFZ"/>
                             <constraint firstItem="1Wa-Gc-Gav" firstAttribute="top" secondItem="Jta-gS-ZES" secondAttribute="bottom" constant="24" id="LUF-f4-unj"/>
                             <constraint firstItem="5QF-9m-Wm0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="OjA-RO-O0X"/>
@@ -96,12 +105,12 @@
                             <constraint firstItem="Oey-bs-tfh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d10-qe-KuP"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5QF-9m-Wm0" secondAttribute="bottom" id="gJG-fT-Er3"/>
                             <constraint firstItem="5QF-9m-Wm0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kua-Az-TU8"/>
-                            <constraint firstItem="VJQ-ez-g6c" firstAttribute="top" secondItem="Oey-bs-tfh" secondAttribute="bottom" constant="43" id="pWQ-yV-jg5"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="addBtn" destination="jul-vw-sfj" id="WxN-iU-0AU"/>
                         <outlet property="addLbl" destination="Oey-bs-tfh" id="Wlx-L0-F6h"/>
+                        <outlet property="equationLbl" destination="iLJ-uq-giQ" id="Qnn-in-Hkb"/>
                         <outlet property="multiLogo" destination="2eR-u6-Abb" id="Xk0-RE-BFc"/>
                         <outlet property="multiTxt" destination="Jta-gS-ZES" id="sGR-i4-DtD"/>
                         <outlet property="playBtn" destination="1Wa-Gc-Gav" id="81h-YQ-1mn"/>
